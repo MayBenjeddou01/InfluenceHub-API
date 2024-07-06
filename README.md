@@ -57,12 +57,10 @@ docker-compose up --build
 ```
 - This command will build the Docker images defined in docker-compose.yaml and start the containers.
 2. The Node.js backend will be accessible at http://localhost:8000.
-##Stopping the Containers
 
 ## Accessing MongoDB
 
 - MongoDB is accessible internally within the Docker network at mongodb://mongodb:27017.
 
 
-## 
-- This README provides instructions for setting up and running your DeepInfluence-Test Node.js backend application using Docker and Docker Compose. Modify it further to include any specific deployment steps or additional details relevant to your project's requirements.
+
