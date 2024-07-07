@@ -2,6 +2,7 @@
 import express from "express";
 import { config } from "dotenv";
 import { dbConnection } from "./database/dbConnection.js";
+import authRouter from "./routes/authRoutes.js";
 
 // Initialize an Express application
 const app = express();
@@ -14,6 +15,11 @@ dbConnection();
 app.get('/', (req, res) => {
   res.send('Hello World!');
 });
+
+// Routes
+app.use("/Authentication", authRouter);
+
+
 
 // Start the server and listen on the port defined in the .env file or default to port 3000
 const port = process.env.PORT || 3000;
