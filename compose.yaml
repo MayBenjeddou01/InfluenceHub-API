@@ -1,8 +1,12 @@
+version: '3.8'
+
 services:
   node:
-    build: ./backend    
+    build:
+      context: .
+      dockerfile: Dockerfile
     container_name: node_service
-    restart : always
+    restart: always
     ports:
       - ${PORT}:${PORT}
     env_file:
@@ -13,10 +17,11 @@ services:
       - backend-network
     environment:
       - NODE_ENV=development
+
   mongodb:
     image: mongo:latest
     container_name: mongodb_service
-    restart : always
+    restart: always
     ports:
       - "27017:27017"
     volumes:
@@ -28,9 +33,9 @@ services:
       MONGO_INITDB_ROOT_PASSWORD: ${MONGO_INITDB_ROOT_PASSWORD}
     env_file: 
       - .env
+
 networks:
   backend-network:
 
 volumes:
   mongodbdata:
-
