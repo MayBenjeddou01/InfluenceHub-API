@@ -20,7 +20,7 @@ Before you begin, ensure you have the following installed on your local machine:
 
 
 ```bash
-git clone https://github.com/FarahR01/DeepInfluence-Test.git
+git clone https://github.com/SmartGalaxy/DEPPINFLUENCEBACKEND.git
 ```
 2.Navigate into the project directory:
 
